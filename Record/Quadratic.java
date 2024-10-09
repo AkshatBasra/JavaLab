@@ -17,6 +17,10 @@ class Quadratic{
 		return b*b-4*a*c;
 	}
 	void compute(){
+		if(a == 0){
+			System.out.println("Invalid Input");
+			return;
+		}
 		if(discriminant() > 0){
 			r1 = (-b + Math.sqrt(discriminant()))/(double)(2*a);
 			r2 = (-b - Math.sqrt(discriminant()))/(double)(2*a);
@@ -35,7 +39,6 @@ class Quadratic{
 			System.out.println("The roots are Imaginary");
 			System.out.println("First root: "+ r1 + "+i" + r2);
 			System.out.println("Second root: "+ r1 + "-i" + r2);
-
 		}
 	}
 }
@@ -43,6 +46,7 @@ class Quadratic{
 
 class Run{
 	public static void main(String[] args){
+		System.out.println("Akshat Basra 1BM23CS020");
 		Quadratic eq1 = new Quadratic();
 		eq1.compute();
 		Quadratic eq2 = new Quadratic();
