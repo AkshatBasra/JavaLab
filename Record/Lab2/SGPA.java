@@ -25,9 +25,9 @@ class Student{
         this.usn = usn;
     }
     void getMarks(){
-        System.out.println("Enter Marks:");
-        for(int i = 0; i < 2; i++){
-            System.out.println("Student "+ (i+1));
+        System.out.println("Enter Subject Details:");
+        for(int i = 0; i < 3; i++){
+            System.out.println("Subject "+ (i+1));
             System.out.print("Name: ");
             String name1 = sc.next();
             System.out.print("Marks: ");
@@ -39,7 +39,7 @@ class Student{
     }
     double getSgpa(){
         int sum = 0;
-        for(int i = 0; i < 2; i++) {
+        for(int i = 0; i < 3; i++) {
             sgpa += (double) subjects[i].grade() * subjects[i].credits;
             sum += subjects[i].credits;
         }
@@ -51,10 +51,18 @@ class Student{
 class SGPARun{
     public static void main(String[] args){
         System.out.println("Akshat Basra 1BM23CS020");
-        Student s1 = new Student("as","12");
+	Student s1 = new Student("as","12");
+	System.out.println("Student " + s1.name + " :");
         s1.getMarks();
-        System.out.println(s1.getSgpa());
-
+	Student s2 = new Student("df","13");
+	System.out.println("Student " + s2.name + " :");
+        s2.getMarks();
+	Student s3 = new Student("gh","14");
+	System.out.println("Student " + s3.name + " :");
+        s3.getMarks();
+        System.out.println(s1.name + " SGPA: "+ s1.getSgpa());
+        System.out.println(s2.name + " SGPA: "+ s2.getSgpa());
+        System.out.println(s3.name + " SGPA: "+ s3.getSgpa());
     }
 }
 
