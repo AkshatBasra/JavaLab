@@ -15,7 +15,7 @@ class  Book{
 		return this.name;
 	}
 	String getAuthor(){
-		return this.Author;
+		return this.author;
 	}
 	float getPrice(){
 		return this.price;
@@ -49,10 +49,10 @@ class BookRun{
 		System.out.println("Akshat Basra 1BM23CS020");
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Number of Books: ");
-		int i, n = sc.nextInt()
-		Book[] b = new Book[n];
+		int i, n = sc.nextInt();
+		Book[] books = new Book[n];
 		for(i = 0; i < n; i++){
-			System.out.print("Book " + i+1); 
+			System.out.println("Book " + (i+1)); 
 			System.out.print("Enter Name: ");
 			String a = sc.next();
 			System.out.print("Enter Author: "); 
@@ -61,17 +61,10 @@ class BookRun{
 			float c = sc.nextFloat();
 			System.out.print("Enter Number of Pages: ");
 			int d = sc.nextInt();
-			b[i] = new Book(a, b, c, d);
-			System.out.println(b[i].toString());
+			books[i] = new Book(a, b, c, d);
+		}
+		for(i = 0; i < n; i++){
+			System.out.println(books[i].toString());
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
